@@ -3,7 +3,6 @@ package com.nyash.rooms.roomsreservationwebapp;
 import com.nyash.rooms.roomsreservationwebapp.client.RoomReservationService;
 import com.nyash.rooms.roomsreservationwebapp.domain.RoomReservation;
 import org.apache.commons.lang.StringUtils;
-import org.springframework.aop.target.LazyInitTargetSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -38,6 +37,7 @@ public class ReservationController {
         }
         List<RoomReservation> roomReservations = this.roomReservationService.getRoomReservationsForDate(date);
         model.addAttribute("roomReservations", roomReservations);
+
         return "reservations";
     }
 

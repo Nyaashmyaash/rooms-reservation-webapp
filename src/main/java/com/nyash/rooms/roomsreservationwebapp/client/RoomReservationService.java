@@ -11,8 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient("RESERVATIONBUSINESSSERVICES")
-@Component
+@FeignClient(value = "RESERVATIONBUSINESSSERVICES")
 public interface RoomReservationService {
 
     @RequestMapping(value = "/rooms", method = RequestMethod.GET)
